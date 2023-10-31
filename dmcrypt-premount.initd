@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="dmcrypt-premount daemon"
+description=""
+command=/usr/bin/dmcrypt-premount
+command_args="${dmcrypt_premount_args}"
+
+depend() {
+	before dmcrypt
+}
